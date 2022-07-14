@@ -4,10 +4,10 @@
   <button class="addbutton" (click)="addTask(task.value)">Addtask</button>
 </div>
 <div>
-  <ul *ngFor="let item of mylist;">
-    <li><input type="checkbox"><label class="strikethrough">{{item.name}}</label>
+  <ul *ngFor="let item of mylist;let i=index">
+    <li><input type="checkbox"><label  class="strikethrough">{{item.name}}</label>
       <div class="close">
-        <button (click)="deletetask(item.id)"> ✖ </button>
+        <button (click)="deletetask(i)"> ✖ </button>
       </div>
     </li>
   </ul>

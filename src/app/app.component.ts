@@ -11,8 +11,14 @@ export class AppComponent {
   addTask(item:any) {
   this.mylist.push({ id:this.mylist.length, name:item })
   }
-  deletetask(id: number) {
-    this.mylist = this.mylist.filter(item =>item.id!== id);
+  // deletetask(id: number) {
+  //   this.mylist = this.mylist.filter(item =>item.id!==id);
    
+  // }
+
+  deletetask(id: number) {
+    this.mylist.splice(id, 1);
   }
+
+    
 }
